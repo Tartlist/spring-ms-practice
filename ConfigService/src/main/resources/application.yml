@@ -1,13 +1,15 @@
 server:
-  port:8081
+  port: 8081
 
 spring:
   cloud:
     config:
       server:
+        default-label: main
         git:
           uri: https://github.com/Tartlist/spring-ms-practice.git
-          searchPaths:ConfigData
+          search-paths:
+            - ConfigData
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
 
